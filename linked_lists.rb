@@ -138,6 +138,18 @@ class LinkedList
       previous_node.next_node = node.next_node
     end
   end
+
+  def values
+    node = @head
+    values = []
+
+    while node
+      values << node.value
+      node = node.next_node
+    end
+
+    values
+  end
 end
 
 class Node
