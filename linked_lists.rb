@@ -81,7 +81,10 @@ class LinkedList
     node = @head
 
     while node
-      return index if node.value == value
+      case node.value
+      in value
+        return index
+      end
       node = node.next_node
       index += 1
     end
