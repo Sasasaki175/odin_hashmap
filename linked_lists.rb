@@ -61,7 +61,7 @@ class LinkedList
       previous_node = node
       node = node.next_node
     end
-
+    
     previous_node.next_node = nil
   end
 
@@ -114,7 +114,7 @@ class LinkedList
     node = @head
     i = 0
     
-    return puts 'Invalid index' unless (index < size)
+    return puts 'Invalid index' unless (index <= size)
     
     if index == 0
       @head = Node.new(value, @head)
