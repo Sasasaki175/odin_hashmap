@@ -1,5 +1,3 @@
-# raise IndexError if index.negative? || index >= @buckets.length
-
 require_relative 'linked_lists'
 
 class HashMap
@@ -41,6 +39,8 @@ class HashMap
         return value[1] if value[0] == key
       end
     end
+
+    return nil
   end
 
   def has?(key)
@@ -88,7 +88,7 @@ class HashMap
 
     @buckets.compact.each do |bucket|
       bucket.values.each do |value|
-        keys << value[1]
+        values << value[1]
       end
     end
 
