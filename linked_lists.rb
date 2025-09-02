@@ -68,8 +68,12 @@ class LinkedList
   def contains?(value)
     node = @head
 
-    while node.value
-      return true if node.value == value
+    while node
+      case node.value
+      in value
+        return true
+      end
+
       node = node.next_node
     end
     
